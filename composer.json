@@ -22,14 +22,6 @@
       "Hephaistos\\": "Hephaistos"
     }
   },
-<<<<<<< Updated upstream
-  "extra": {
-    "branch-alias": {
-      "master": "0.1.2"
-    }
-  },
-=======
->>>>>>> Stashed changes
   "config": {
     "platform": {
       "php": "7.2"
