@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Media;
+namespace Hephaistos\Media;
 
 
 class Multiple

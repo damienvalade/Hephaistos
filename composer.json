@@ -1,6 +1,6 @@
 {
     "name": "damienvalade/hephaistos",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "library",
     "description": "Media manager, Cropper, Resize, Optimizer and more if you want ;)",
     "keywords": [
@@ -30,5 +30,8 @@
     "support": {
         "email": "damien@damienvalade.fr",
         "issues": "https://github.com/damienvalade/Hephaistos"
-    }
+    },
+  "require": {
+    "ext-gd": "*"
+  }
 }

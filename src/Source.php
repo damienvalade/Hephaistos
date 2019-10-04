@@ -1,12 +1,11 @@
 <?php
 
 
-namespace App\Media;
+namespace Hephaistos\Media;
 
 use SplFileInfo;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class Source extends AbstractController
+class Source
 {
 
     public function __construct()
