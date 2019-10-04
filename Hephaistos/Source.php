@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Hephaistos\Media;
+namespace Hephaistos;
 
 use SplFileInfo;
 

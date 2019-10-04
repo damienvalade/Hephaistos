@@ -1,36 +1,41 @@
 {
-    "name": "damienvalade/hephaistos",
-    "version": "0.1.1",
-    "type": "library",
-    "description": "Media manager, Cropper, Resize, Optimizer and more if you want ;)",
-    "keywords": [
-        "resize",
-        "cropper",
-        "optimizer"
-    ],
-    "homepage": "https://portfolio.damienvalade.fr/",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Damien Valade",
-            "email": "damien@damienvalade.fr",
-            "homepage": "https://portfolio.damienvalade.fr/"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Core\\": "src/"
-        }
-    },
-    "config": {
-        "platform": {
-            "php": "7.2"
-        }
-    },
-    "support": {
-        "email": "damien@damienvalade.fr",
-        "issues": "https://github.com/damienvalade/Hephaistos"
-    },
+  "name": "damienvalade/hephaistos",
+  "version": "0.1.2",
+  "type": "library",
+  "description": "Media manager, Cropper, Resize, Optimizer and more if you want ;)",
+  "keywords": [
+    "resize",
+    "cropper",
+    "optimizer"
+  ],
+  "homepage": "https://portfolio.damienvalade.fr/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Damien Valade",
+      "email": "damien@damienvalade.fr",
+      "homepage": "https://portfolio.damienvalade.fr/"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Hephaistos\\": "Hephaistos"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.2"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.2"
+    }
+  },
+  "support": {
+    "email": "damien@damienvalade.fr",
+    "issues": "https://github.com/damienvalade/Hephaistos"
+  },
   "require": {
     "ext-gd": "*"
   }

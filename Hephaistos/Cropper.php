@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Hephaistos\Media;
+namespace Hephaistos;
 
 
 class Cropper extends Source
