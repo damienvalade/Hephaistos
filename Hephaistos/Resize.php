@@ -16,41 +16,40 @@ class Resize extends Source
     public function resize(string $target, Array $size, $proportional = false): bool
     {
 
-        $width = NULL;
-        $height = NULL;
-        $percent = NULL;
+        $oldWidth = NULL;
+        $oldHeight = NULL;
 
-        [$oldwidth, $oldheight] = getimagesize($target);
+        $newWidth = NULL;
+        $newHeight = NULL;
+
+        $percent = 1;
+
+        [$oldWidth, $oldHeight] = getimagesize($target);
 
 
         if ($proportional === true) {
-
-            $percent = 1;
 
             foreach ($size as $key => $val) {
                 $percent = $key === 'percent' ? $val : $percent;
             }
 
-            $width = $oldwidth * $percent;
-            $height = $oldheight * $percent;
+            $newWidth = $oldWidth * $percent;
+            $newHeight = $oldHeight * $percent;
         }
 
         if ($proportional === false) {
             foreach ($size as $key => $val) {
-                $width = $key === 'width' ? $val : $width;
-                $height = $key === 'height' ? $val : $height;
+                $newWidth = $key === 'width' ? $val : $newWidth;
+                $newHeight = $key === 'height' ? $val : $newHeight;
             }
         }
 
-        $dest = $this->renameFile($target, $width, $height);
-
-        $newWidth = $width;
-        $newHeight = $height;
+        $dest = $this->renameFile($target, $newWidth, $newHeight);
 
         $thumb = imagecreatetruecolor($newWidth, $newHeight);
         $sourceTargeted = $this->pictureCreateType($target);
 
-        imagecopyresampled($thumb, $sourceTargeted, 0, 0, 0, 0, $newWidth, $newHeight, $oldwidth, $oldheight);
+        imagecopyresampled($thumb, $sourceTargeted, 0, 0, 0, 0, $newWidth, $newHeight, $oldWidth, $oldHeight);
 
         $this->pictureType($target, $thumb, $dest);
 

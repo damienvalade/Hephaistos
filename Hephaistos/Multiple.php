@@ -41,7 +41,13 @@ class Multiple
             ];
 
             if ($type === 'Cropper') {
-                $this->cropper->cropper($target, $size);
+
+                if ($percent !== null) {
+                    $this->cropper->cropper($target, $size, $percent);
+                }
+                if ($percent === null) {
+                    $this->cropper->cropper($target, $size);
+                }
             }
 
             if ($type === 'Resize') {
